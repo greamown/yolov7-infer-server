@@ -18,7 +18,7 @@ sudo chmod u+x ./docker/*.sh
 sudo ./docker/download.sh
 docker load < yolov7-server.tar
 ```
-**building image**
+**Building image**
 ```shell
 sudo chmod u+x ./docker/*.sh
 sudo ./docker/build.sh
