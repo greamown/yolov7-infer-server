@@ -11,34 +11,40 @@ Install **nvidia-driver-520**(gpu, cuda-11.8), **nvidia-docker** and **docker** 
 
 - [Tutorial-nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
 
-###  Loading docker images
+###  Loading docker images or building image
+**Loading docker images**
 ```shell
-    sudo chmod u+x ./docker/*.sh
-    sudo ./docker/download.sh
-    docker load < yolov7-server.tar
+sudo chmod u+x ./docker/*.sh
+sudo ./docker/download.sh
+docker load < yolov7-server.tar
+```
+**building image**
+```shell
+sudo chmod u+x ./docker/*.sh
+sudo ./docker/build.sh
 ```
 
 ###  Download yolov7
 ```shell
-    git clone https://github.com/WongKinYiu/yolov7.git
+git clone https://github.com/WongKinYiu/yolov7.git
 ```
 
 ### Run docker container
 ```shell
-    sudo chmod u+x ./docker/*.sh
-    sudo ./docker/run.sh
+sudo chmod u+x ./docker/*.sh
+sudo ./docker/run.sh
 ```
 
 ### Run webAPI service
 
 ```python
-    python3 server.py -p 550
+python3 server.py -p 550
 ```
 - p: The port number of server.
 
 ### Testing
 ```python
-    python3 client.py -p <folder/files>
+python3 client.py -p <folder/files>
 ```
 - p: The path of inference images. you can input the folder path or the image path.
 
