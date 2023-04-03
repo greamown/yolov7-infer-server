@@ -50,6 +50,7 @@ python3 client.py -p <folder/files>
 <div align="center">
   <img width="80%" height="80%" src="data/example.png">
 </div>
+
 ## Reference
 - YOLOv7
     - https://github.com/WongKinYiu/yolov7
