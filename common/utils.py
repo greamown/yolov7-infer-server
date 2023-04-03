@@ -64,7 +64,10 @@ def save_file(files):
             # Most limit 10 pics
             if file and idx < 10:
                 # Get file name
-                filename = secure_filename(file.filename)
+                filename = file.filename
+                if "/" in file.filename:
+                    filename = os.path.split(str(file.filename))[-1]
+                filename = secure_filename(filename)
                 # Skip other format exclude image format
                 if not (filename.split(".")[-1] in ALLOWED_EXTENSIONS["image"]):
                     logging.error("This type of filename is not allowed:[{}:{}]".format(filename, filename.split(".")[-1]))

@@ -47,7 +47,9 @@ python3 server.py -p 550
 python3 client.py -p <folder/files>
 ```
 - p: The path of inference images. you can input the folder path or the image path.
-
+<div align="center">
+  <img width="80%" height="80%" src="data/example.png">
+</div>
 ## Reference
 - YOLOv7
     - https://github.com/WongKinYiu/yolov7
